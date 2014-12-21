@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>@ViewBag.Title</title>
+
+        <!-- Include CSS -->
+        <link href="@Url.Content("~/content/bootstrap.min.css")" rel="stylesheet" />
+        <link href="@Url.Content("~/content/toastr.min.css")" rel="stylesheet" />
+        <link href="@Url.Content("~/content/qunit.css")" rel="stylesheet" />
+        <link href="@Url.Content("~/content/style.css")" rel="stylesheet" />
+        @RenderSection("styles", false)
+    </head>
+    <body>
+
+        <!-- Site header and navigation -->
+        <header class="top" role="header">
+            <div class="container">
+                <a href="#" class="navbar-brand pull-left">
+                    BS3 TUTORIAL
+                </a>
+            </div>
+        </header>
+
+        <!-- Site banner -->
+        <div class="banner">
+            <div class="container">
+                @RenderSection("banner", false)
+            </div>
+        </div>
+
+        <!-- Middle content section -->
+        <div class="middle">
+            <div class="container">
+                @RenderBody()
+            </div>
+        </div>
+
+        <!-- Site footer -->
+        <div class="bottom">
+            <div class="container">
+                <div class="col-md-4">
+                    <h3><span class="glyphicon glyphicon-heart"></span> Footer section 1</h3>
+                    <p>Content for the first footer section.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3><span class="glyphicon glyphicon-star"></span> Footer section 2</h3>
+                    <p>Content for the second footer section.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3><span class="glyphicon glyphicon-music"></span> Footer section 3</h3>
+                    <p>Content for the third footer section.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Include JS -->
+        <script src="@Url.Content("~/Scripts/jquery-2.1.1.js")"></script>
+        <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
+        <script src="@Url.Content("~/Scripts/bootbox.js")"></script>
+        <script src="@Url.Content("~/Scripts/toastr.js")"></script>        
+        <script src="@Url.Content("~/Scripts/amplify.js")"></script>
+        <script src="@Url.Content("~/Scripts/knockout-3.2.0.js")"></script>
+        <script src="@Url.Content("~/Scripts/Views/Shared/Extentions/ko.extn.js")"></script>
+        <script src="@Url.Content("~/Scripts/knockout.validation.js")"></script>
+        <script src="@Url.Content("~/Scripts/qunit.js")"></script>     
+        <script src="@Url.Content("~/Scripts/jquery.signalR-1.1.4.js")"></script>     
+        <script src="@Url.Content("~/signalr/hubs")"></script> 
+        @RenderSection("scripts", false)
+    </body>
+</html>
